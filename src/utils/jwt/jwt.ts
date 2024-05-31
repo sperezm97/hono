@@ -24,6 +24,7 @@ const decodeJwtPart = (part: string): TokenHeader | JWTPayload | undefined =>
 export interface TokenHeader {
   alg: SignatureAlgorithm
   typ?: 'JWT'
+  kid?: string
 }
 
 export function isTokenHeader(obj: unknown): obj is TokenHeader {
